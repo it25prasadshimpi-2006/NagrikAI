@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "Complaint": {
+      "title": "Complaint",
+      "description": "A citizen grievance report with AI classification and triage tracking.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Complaint reference identifier formatted like NGK-XXXX"
+        },
+        "description": {
+          "type": "string",
+          "description": "Complaint body submitted by citizen"
+        },
+        "category": {
+          "type": "string",
+          "description": "Civic category"
+        },
+        "severity": {
+          "type": "number",
+          "description": "Severity level 1 to 5"
+        },
+        "status": {
+          "type": "string",
+          "description": "Triage status"
+        },
+        "wardId": {
+          "type": "string",
+          "description": "Ward ID"
+        },
+        "citizenUserId": {
+          "type": "string",
+          "description": "Optional Firebase user UID of citizen"
+        },
+        "citizenEmail": {
+          "type": "string",
+          "description": "Optional citizen email"
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Submission ISO timestamp"
+        }
+      },
+      "required": ["id", "description", "category", "severity", "status", "wardId"]
+    }
+  },
+  "firestore": {
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Public and citizen grievance records"
+    }
+  }
+}

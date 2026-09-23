@@ -1,0 +1,6 @@
+{
+  "name": "Nagrik AI",
+  "description": "Citizen Infrastructure Feedback & Prioritization Platform for Digital Public Infrastructure and Governance powered by Gemini AI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
